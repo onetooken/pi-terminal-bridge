@@ -76,9 +76,12 @@ Pi Terminal Bridge: Send Selected Code / 发送选中代码
 
 发送选中代码时，扩展会先添加代码位置引用，再添加选中的代码内容，例如：
 
-```text
-@src/example.ts:10-20 <selected code>
+````text
+@src/example.ts:10-20
 ```
+<selected code>
+```
+````
 
 这两个命令都会复用仍然打开的 `Pi` 终端。如果当前没有 `Pi` 终端，扩展会在第一编辑器列打开一个新终端，并启动 `piTerminal.command`。
 
@@ -204,9 +207,12 @@ Pi Terminal Bridge: Send Selected Code / 发送选中代码
 
 When sending selected code, the extension prefixes the selected content with its code reference, for example:
 
-```text
-@src/example.ts:10-20 <selected code>
+````text
+@src/example.ts:10-20
 ```
+<selected code>
+```
+````
 
 Both commands reuse the existing `Pi` terminal when it is still open. If no `Pi` terminal exists, the extension opens one in the first editor column and starts `piTerminal.command`.
 

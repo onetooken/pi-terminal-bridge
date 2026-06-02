@@ -111,7 +111,7 @@ function getPiCommand(): string {
 }
 
 function formatSelectedCodeMessage(editor: vscode.TextEditor, text: string): string {
-  return `${formatCodeReference(editor)} ${formatSelectedCodeForTerminal(text)}`;
+  return formatSelectedCodeForTerminal(`${formatCodeReference(editor)}\n\`\`\`\n${text}\n\`\`\`\n`);
 }
 
 function formatSelectedCodeForTerminal(text: string): string {
