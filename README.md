@@ -1,15 +1,15 @@
-# Pi Terminal
+# Pi Terminal Bridge
 
 ## 中文
 
-Pi Terminal 是一个最小化的 VS Code 扩展，用于打开一个共享的内置终端 `Pi`，并执行可配置的启动命令。
+Pi Terminal Bridge 是一个最小化的 VS Code 扩展，用于打开一个共享的内置终端 `Pi`，并执行可配置的启动命令。
 
 ### 使用
 
 在命令面板中运行：
 
 ```text
-Pi Terminal: Open / 打开 Pi 终端
+Pi Terminal Bridge: Open / 打开 Pi 终端
 ```
 
 该命令只维护一个共享的 `Pi` 终端实例。如果终端已经打开，会聚焦已有终端，而不是再创建一个新终端。
@@ -38,12 +38,12 @@ pi
 
 ### 发送代码到 Pi
 
-Pi Terminal 会在编辑器右键菜单中添加操作，用于把代码上下文发送到 Pi 终端。
+Pi Terminal Bridge 会在编辑器右键菜单中添加操作，用于把代码上下文发送到 Pi 终端。
 
 在编辑器中右键运行：
 
 ```text
-Pi Terminal: Send Code Reference / 发送代码引用
+Pi Terminal Bridge: Send Code Reference / 发送代码引用
 ```
 
 选中代码时，会发送类似这样的引用：
@@ -67,7 +67,7 @@ Pi Terminal: Send Code Reference / 发送代码引用
 如果要发送选中的代码内容，选中代码后右键运行：
 
 ```text
-Pi Terminal: Send Selected Code / 发送选中代码
+Pi Terminal Bridge: Send Selected Code / 发送选中代码
 ```
 
 发送选中代码时，扩展会先添加代码位置引用，再添加选中的代码内容，例如：
@@ -94,7 +94,7 @@ VS Code 没有提供只设置某一个内置终端实例字体大小的 API。�
 }
 ```
 
-Pi Terminal 不会写入 `terminal.integrated.fontSize` 或其他全局终端设置，因此不会影响普通终端。
+Pi Terminal Bridge 不会写入 `terminal.integrated.fontSize` 或其他全局终端设置，因此不会影响普通终端。
 
 ### 开发
 
@@ -110,16 +110,30 @@ npm install
 npm run compile
 ```
 
+本地打包为 VSIX：
+
+```bash
+vsce package
+```
+
+如果本地没有安装 `vsce`，可以使用：
+
+```bash
+npx @vscode/vsce package
+```
+
+打包完成后会生成类似 `pi-terminal-bridge-0.0.1.vsix` 的文件。可以在 VS Code 中通过 `Extensions: Install from VSIX...` 安装。
+
 ## English
 
-Pi Terminal is a minimal VS Code extension that opens one shared integrated terminal named `Pi` and runs a configurable command.
+Pi Terminal Bridge is a minimal VS Code extension that opens one shared integrated terminal named `Pi` and runs a configurable command.
 
 ### Usage
 
 Run this command from the Command Palette:
 
 ```text
-Pi Terminal: Open / 打开 Pi 终端
+Pi Terminal Bridge: Open / 打开 Pi 终端
 ```
 
 The command opens one shared `Pi` terminal instance. If it is already open, the command focuses the existing terminal instead of creating another one.
@@ -148,12 +162,12 @@ For example:
 
 ### Send Code to Pi
 
-Pi Terminal adds editor context menu actions for sending code context to the Pi terminal.
+Pi Terminal Bridge adds editor context menu actions for sending code context to the Pi terminal.
 
 Right-click in an editor and run:
 
 ```text
-Pi Terminal: Send Code Reference / 发送代码引用
+Pi Terminal Bridge: Send Code Reference / 发送代码引用
 ```
 
 With a selection, this sends a reference like:
@@ -177,7 +191,7 @@ Without a selection, it sends the current file reference:
 To send selected code text, select code, right-click, and run:
 
 ```text
-Pi Terminal: Send Selected Code / 发送选中代码
+Pi Terminal Bridge: Send Selected Code / 发送选中代码
 ```
 
 When sending selected code, the extension prefixes the selected content with its code reference, for example:
@@ -204,7 +218,7 @@ VS Code does not expose an API for setting the font size of only one integrated 
 }
 ```
 
-Pi Terminal does not write to `terminal.integrated.fontSize` or any other global terminal setting, so it will not affect your regular terminals.
+Pi Terminal Bridge does not write to `terminal.integrated.fontSize` or any other global terminal setting, so it will not affect your regular terminals.
 
 ### Development
 
@@ -219,3 +233,17 @@ Compile:
 ```bash
 npm run compile
 ```
+
+Package a local VSIX:
+
+```bash
+vsce package
+```
+
+If `vsce` is not installed locally, use:
+
+```bash
+npx @vscode/vsce package
+```
+
+The package command generates a file like `pi-terminal-bridge-0.0.1.vsix`. Install it in VS Code with `Extensions: Install from VSIX...`.

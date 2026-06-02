@@ -21,7 +21,7 @@ export function activate(context: vscode.ExtensionContext): void {
     () => {
       const editor = vscode.window.activeTextEditor;
       if (!editor) {
-        void vscode.window.showInformationMessage('Open a file before sending a code reference to Pi Terminal.');
+        void vscode.window.showInformationMessage('Open a file before sending a code reference to Pi Terminal Bridge.');
         return;
       }
 
@@ -34,13 +34,13 @@ export function activate(context: vscode.ExtensionContext): void {
     () => {
       const editor = vscode.window.activeTextEditor;
       if (!editor) {
-        void vscode.window.showInformationMessage('Select code before sending it to Pi Terminal.');
+        void vscode.window.showInformationMessage('Select code before sending it to Pi Terminal Bridge.');
         return;
       }
 
       const selection = editor.selection;
       if (selection.isEmpty) {
-        void vscode.window.showInformationMessage('Select code before sending it to Pi Terminal.');
+        void vscode.window.showInformationMessage('Select code before sending it to Pi Terminal Bridge.');
         return;
       }
 

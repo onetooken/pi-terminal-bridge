@@ -52,7 +52,7 @@ function activate(context) {
     const sendReferenceDisposable = vscode.commands.registerCommand(SEND_REFERENCE_COMMAND, () => {
         const editor = vscode.window.activeTextEditor;
         if (!editor) {
-            void vscode.window.showInformationMessage('Open a file before sending a code reference to Pi Terminal.');
+            void vscode.window.showInformationMessage('Open a file before sending a code reference to Pi Terminal Bridge.');
             return;
         }
         sendToPiTerminal(formatCodeReference(editor));
@@ -60,12 +60,12 @@ function activate(context) {
     const sendSelectionDisposable = vscode.commands.registerCommand(SEND_SELECTION_COMMAND, () => {
         const editor = vscode.window.activeTextEditor;
         if (!editor) {
-            void vscode.window.showInformationMessage('Select code before sending it to Pi Terminal.');
+            void vscode.window.showInformationMessage('Select code before sending it to Pi Terminal Bridge.');
             return;
         }
         const selection = editor.selection;
         if (selection.isEmpty) {
-            void vscode.window.showInformationMessage('Select code before sending it to Pi Terminal.');
+            void vscode.window.showInformationMessage('Select code before sending it to Pi Terminal Bridge.');
             return;
         }
         sendToPiTerminal(formatSelectedCodeMessage(editor, editor.document.getText(selection)));

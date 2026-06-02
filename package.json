@@ -1,7 +1,7 @@
 {
-  "name": "pi-terminal",
-  "displayName": "Pi Terminal",
-  "description": "Open a dedicated VS Code terminal for Pi. / 打开专用于 Pi 的 VS Code 终端。",
+  "name": "pi-terminal-bridge",
+  "displayName": "Pi Terminal Bridge",
+  "description": "Bridge VS Code code context to a dedicated Pi terminal. / 将 VS Code 代码上下文桥接到专用 Pi 终端。",
   "version": "0.0.1",
   "publisher": "local",
   "engines": {
@@ -23,15 +23,15 @@
     "commands": [
       {
         "command": "piTerminal.open",
-        "title": "Pi Terminal: Open / 打开 Pi 终端"
+        "title": "Pi Terminal Bridge: Open / 打开 Pi 终端"
       },
       {
         "command": "piTerminal.sendReference",
-        "title": "Pi Terminal: Send Code Reference / 发送代码引用"
+        "title": "Pi Terminal Bridge: Send Code Reference / 发送代码引用"
       },
       {
         "command": "piTerminal.sendSelection",
-        "title": "Pi Terminal: Send Selected Code / 发送选中代码"
+        "title": "Pi Terminal Bridge: Send Selected Code / 发送选中代码"
       }
     ],
     "menus": {
@@ -49,7 +49,7 @@
       ]
     },
     "configuration": {
-      "title": "Pi Terminal",
+      "title": "Pi Terminal Bridge",
       "properties": {
         "piTerminal.command": {
           "type": "string",
