@@ -12,7 +12,11 @@ Pi Terminal Bridge 是一个最小化的 VS Code 扩展，用于打开一个共�
 Pi Terminal Bridge: Open / 打开 Pi 终端
 ```
 
+也可以点击编辑器标题栏中的终端图标打开 Pi 终端。
+
 该命令只维护一个共享的 `Pi` 终端实例。如果终端已经打开，会聚焦已有终端，而不是再创建一个新终端。
+
+如果当前没有 `Pi` 终端，扩展会在第一编辑器列打开一个新终端。
 
 默认情况下，扩展会向新终端发送：
 
@@ -76,7 +80,7 @@ Pi Terminal Bridge: Send Selected Code / 发送选中代码
 @src/example.ts:10-20 <selected code>
 ```
 
-这两个命令都会复用仍然打开的 `Pi` 终端。如果当前没有 `Pi` 终端，扩展会在编辑器区域打开一个新终端，并启动 `piTerminal.command`。
+这两个命令都会复用仍然打开的 `Pi` 终端。如果当前没有 `Pi` 终端，扩展会在第一编辑器列打开一个新终端，并启动 `piTerminal.command`。
 
 发送的引用和代码只会粘贴到终端输入区，不会自动按 Enter 提交。
 
@@ -136,7 +140,11 @@ Run this command from the Command Palette:
 Pi Terminal Bridge: Open / 打开 Pi 终端
 ```
 
+You can also click the terminal icon in the editor title bar to open the Pi terminal.
+
 The command opens one shared `Pi` terminal instance. If it is already open, the command focuses the existing terminal instead of creating another one.
+
+If no `Pi` terminal exists, the extension opens a new terminal in the first editor column.
 
 By default, the extension sends this command to the new terminal:
 
@@ -200,7 +208,7 @@ When sending selected code, the extension prefixes the selected content with its
 @src/example.ts:10-20 <selected code>
 ```
 
-Both commands reuse the existing `Pi` terminal when it is still open. If no `Pi` terminal exists, the extension opens one in the editor area and starts `piTerminal.command`.
+Both commands reuse the existing `Pi` terminal when it is still open. If no `Pi` terminal exists, the extension opens one in the first editor column and starts `piTerminal.command`.
 
 Sent references and code are pasted into the terminal input without automatically pressing Enter.
 

@@ -67,7 +67,7 @@ export function deactivate(): void {}
 function openPiTerminal(): vscode.Terminal {
   piTerminal = vscode.window.createTerminal({
     name: TERMINAL_NAME,
-    location: vscode.TerminalLocation.Editor,
+    location: { viewColumn: vscode.ViewColumn.One },
   });
   piTerminal.show();
 

@@ -27,7 +27,11 @@
     "commands": [
       {
         "command": "piTerminal.open",
-        "title": "Pi Terminal Bridge: Open / 打开 Pi 终端"
+        "title": "Pi Terminal Bridge: Open / 打开 Pi 终端",
+        "icon": {
+          "light": "media/pi-light.svg",
+          "dark": "media/pi-dark.svg"
+        }
       },
       {
         "command": "piTerminal.sendReference",
@@ -39,6 +43,12 @@
       }
     ],
     "menus": {
+      "editor/title": [
+        {
+          "command": "piTerminal.open",
+          "group": "navigation@70"
+        }
+      ],
       "editor/context": [
         {
           "command": "piTerminal.sendReference",
