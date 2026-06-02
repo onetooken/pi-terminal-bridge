@@ -1,0 +1,9 @@
+{
+  "extension.displayName": "Pi Terminal Bridge",
+  "extension.description": "将 VS Code 代码上下文桥接到专用 Pi 终端。",
+  "commands.open.title": "Pi Terminal Bridge: 打开 Pi 终端",
+  "commands.sendReference.title": "Pi Terminal Bridge: 发送代码引用",
+  "commands.sendSelection.title": "Pi Terminal Bridge: 发送选中代码",
+  "configuration.title": "Pi Terminal Bridge",
+  "configuration.command.description": "新 Pi 终端打开后执行的命令。"
+}

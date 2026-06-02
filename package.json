@@ -1,7 +1,7 @@
 {
   "name": "pi-terminal-bridge",
-  "displayName": "Pi Terminal Bridge",
-  "description": "Bridge VS Code code context to a dedicated Pi terminal. / 将 VS Code 代码上下文桥接到专用 Pi 终端。",
+  "displayName": "%extension.displayName%",
+  "description": "%extension.description%",
   "version": "0.0.1",
   "repository": {
     "type": "git",
@@ -23,11 +23,12 @@
     "onCommand:piTerminal.sendSelection"
   ],
   "main": "./out/extension.js",
+  "l10n": "./l10n",
   "contributes": {
     "commands": [
       {
         "command": "piTerminal.open",
-        "title": "Pi Terminal Bridge: Open / 打开 Pi 终端",
+        "title": "%commands.open.title%",
         "icon": {
           "light": "media/pi-light.svg",
           "dark": "media/pi-dark.svg"
@@ -35,11 +36,11 @@
       },
       {
         "command": "piTerminal.sendReference",
-        "title": "Pi Terminal Bridge: Send Code Reference / 发送代码引用"
+        "title": "%commands.sendReference.title%"
       },
       {
         "command": "piTerminal.sendSelection",
-        "title": "Pi Terminal Bridge: Send Selected Code / 发送选中代码"
+        "title": "%commands.sendSelection.title%"
       }
     ],
     "menus": {
@@ -63,12 +64,12 @@
       ]
     },
     "configuration": {
-      "title": "Pi Terminal Bridge",
+      "title": "%configuration.title%",
       "properties": {
         "piTerminal.command": {
           "type": "string",
           "default": "pi",
-          "description": "Command sent to the new Pi terminal after it opens. / 新 Pi 终端打开后执行的命令。"
+          "description": "%configuration.command.description%"
         }
       }
     }

@@ -1,0 +1,9 @@
+{
+  "extension.displayName": "Pi Terminal Bridge",
+  "extension.description": "Bridge VS Code code context to a dedicated Pi terminal.",
+  "commands.open.title": "Pi Terminal Bridge: Open",
+  "commands.sendReference.title": "Pi Terminal Bridge: Send Code Reference",
+  "commands.sendSelection.title": "Pi Terminal Bridge: Send Selected Code",
+  "configuration.title": "Pi Terminal Bridge",
+  "configuration.command.description": "Command sent to the new Pi terminal after it opens."
+}
