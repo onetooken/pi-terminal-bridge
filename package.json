@@ -1,0 +1,72 @@
+{
+  "name": "pi-terminal",
+  "displayName": "Pi Terminal",
+  "description": "Open a dedicated VS Code terminal for Pi. / 打开专用于 Pi 的 VS Code 终端。",
+  "version": "0.0.1",
+  "publisher": "local",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "extensionKind": [
+    "workspace"
+  ],
+  "activationEvents": [
+    "onCommand:piTerminal.open",
+    "onCommand:piTerminal.sendReference",
+    "onCommand:piTerminal.sendSelection"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "piTerminal.open",
+        "title": "Pi Terminal: Open / 打开 Pi 终端"
+      },
+      {
+        "command": "piTerminal.sendReference",
+        "title": "Pi Terminal: Send Code Reference / 发送代码引用"
+      },
+      {
+        "command": "piTerminal.sendSelection",
+        "title": "Pi Terminal: Send Selected Code / 发送选中代码"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "piTerminal.sendReference",
+          "when": "editorTextFocus",
+          "group": "navigation@80"
+        },
+        {
+          "command": "piTerminal.sendSelection",
+          "when": "editorTextFocus",
+          "group": "navigation@81"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Pi Terminal",
+      "properties": {
+        "piTerminal.command": {
+          "type": "string",
+          "default": "pi",
+          "description": "Command sent to the new Pi terminal after it opens. / 新 Pi 终端打开后执行的命令。"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "vscode:prepublish": "npm run compile"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "@types/vscode": "1.90.0",
+    "typescript": "^5.4.5"
+  }
+}
