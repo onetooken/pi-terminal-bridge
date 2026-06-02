@@ -3,6 +3,10 @@
   "displayName": "Pi Terminal Bridge",
   "description": "Bridge VS Code code context to a dedicated Pi terminal. / 将 VS Code 代码上下文桥接到专用 Pi 终端。",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/onetooken/pi-terminal-bridge.git"
+  },
   "publisher": "local",
   "engines": {
     "vscode": "^1.90.0"
